@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>3.2 Visualization Basics 2  - Data Reading</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>4.1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,15 +14259,21 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Importing-Pandas-library">Importing Pandas library<a class="anchor-link" href="#Importing-Pandas-library">&#182;</a></h4>
+<h2 id="4.2-SWE-688">4.2 SWE 688<a class="anchor-link" href="#4.2-SWE-688">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Importing-Pandas">Importing Pandas<a class="anchor-link" href="#Importing-Pandas">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
      </div>
@@ -14275,21 +14281,19 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Reading-data-files">Reading data files<a class="anchor-link" href="#Reading-data-files">&#182;</a></h4>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[202]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># url = &#39;Drive:\Folder\FilesName.csv&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## data file read</span>
+
+<span class="c1"># url = &#39;location&#39;</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;G:\GDrive\MASTERS\WORKS\DataSets\iris.csv&#39;</span>
 
-<span class="c1"># variable = pandas_alias.read_csv(file_link)</span>
+<span class="c1"># varibale = pandas_alias.read_csv(file_link)</span>
+
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 
@@ -14301,10 +14305,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#shape shows num of rows and columns</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># how many rows and columns? /  dhape</span>
 <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -14321,7 +14325,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14339,10 +14343,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># view columns of data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># viewing columns of data</span>
 <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
@@ -14359,7 +14363,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -14379,10 +14383,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#view heads and data example</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># viewing data represntation /heads</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -14399,7 +14403,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -14490,10 +14494,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># view data types</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># viewing data types</span>
 <span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
@@ -14510,7 +14514,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -14535,24 +14539,24 @@ dtype: object</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Slicing-and-Indexing">Slicing and Indexing<a class="anchor-link" href="#Slicing-and-Indexing">&#182;</a></h2><ul>
-<li>lOC: label based accessing function</li>
-<li>ilOC: position based accessing function</li>
+<li>loc : location based accessing function</li>
+<li>iloc : integer based...</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="loc-uses-label">loc uses label<a class="anchor-link" href="#loc-uses-label">&#182;</a></h3>
+<h3 id="LOC-:-uses-label">LOC : uses label<a class="anchor-link" href="#LOC-:-uses-label">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[179]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#LOC</span>
-<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span> <span class="c1">#showing row id 3 (1st column) and 5th row</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># loc</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span> <span class="c1">## showing row id 3(1st column) and 5th row</span>
 </pre></div>
 
      </div>
@@ -14568,7 +14572,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[179]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -14632,10 +14636,11 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[178]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span><span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">]]</span> <span class="c1">#showing 3rd and 5th row, species and sepalwidth</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## specific columns and rows</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span><span class="s1">&#39;Species&#39;</span><span class="p">]]</span>
 </pre></div>
 
      </div>
@@ -14651,7 +14656,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[178]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 
 
 
@@ -14674,20 +14679,20 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>SepalLengthCm</th>
       <th>Species</th>
-      <th>SepalWidthCm</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2</th>
+      <td>4.7</td>
       <td>Iris-setosa</td>
-      <td>3.2</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>5.0</td>
       <td>Iris-setosa</td>
-      <td>3.6</td>
     </tr>
   </tbody>
 </table>
@@ -14703,10 +14708,11 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[177]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">:</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span> <span class="c1">#showing PetalLengthCm to Species columns *range all rows</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## show data of column range</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">:</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14722,7 +14728,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[177]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 
 
 
@@ -14745,6 +14751,8 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>SepalLengthCm</th>
+      <th>SepalWidthCm</th>
       <th>PetalLengthCm</th>
       <th>PetalWidthCm</th>
       <th>Species</th>
@@ -14753,30 +14761,40 @@ dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
       <td>1.4</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
       <td>1.4</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
       <td>1.3</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
       <td>1.5</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
       <td>1.4</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
@@ -14786,40 +14804,52 @@ dtype: object</pre>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
       <td>5.2</td>
       <td>2.3</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
       <td>5.0</td>
       <td>1.9</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
       <td>5.2</td>
       <td>2.0</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
       <td>5.4</td>
       <td>2.3</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
       <td>5.1</td>
       <td>1.8</td>
       <td>Iris-virginica</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 3 columns</p>
+<p>150 rows × 5 columns</p>
 </div>
 </div>
 
@@ -14832,16 +14862,16 @@ dtype: object</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="iloc-uses-position">iloc uses position<a class="anchor-link" href="#iloc-uses-position">&#182;</a></h3>
+<h2 id="iloc-uses-position">iloc uses position<a class="anchor-link" href="#iloc-uses-position">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[164]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## iloc</span>
-<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#gives 1st row</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##iloc rows</span>
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">149</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14857,19 +14887,19 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[164]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Id                         1
-SepalLengthCm            5.1
-SepalWidthCm             3.5
-PetalLengthCm            1.4
-PetalWidthCm             0.2
-Species          Iris-setosa
-Name: 0, dtype: object</pre>
+<pre>Id                          150
+SepalLengthCm               5.9
+SepalWidthCm                  3
+PetalLengthCm               5.1
+PetalWidthCm                1.8
+Species          Iris-virginica
+Name: 149, dtype: object</pre>
 </div>
 
 </div>
@@ -14881,10 +14911,11 @@ Name: 0, dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[173]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#gives 1st row 3rd colmns value</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># accessing speciofic data</span>
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">145</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14900,13 +14931,13 @@ Name: 0, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[173]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>3.5</pre>
+<pre>&#39;Iris-virginica&#39;</pre>
 </div>
 
 </div>
@@ -14918,11 +14949,13 @@ Name: 0, dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[174]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># rows ^th range and column ^th range</span>
-<span class="c1"># this range does not take last index data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#row range data viswing </span>
+<span class="c1">#range -&gt; last index data X</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># 0,1,2 (3X)</span>
 </pre></div>
 
      </div>
@@ -14938,7 +14971,7 @@ Name: 0, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[174]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 
 
 
@@ -14976,6 +15009,11 @@ Name: 0, dtype: object</pre>
       <td>4.9</td>
       <td>3.0</td>
     </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -14990,15 +15028,11 @@ Name: 0, dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[188]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##getting max value</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;SepalLengthCm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;SepalLengthCm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">SepalLengthCm</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># getitng maximum value</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15014,16 +15048,15 @@ Name: 0, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>7.9
-7.9
-7.9
-7.9
-</pre>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>7.9</pre>
 </div>
+
 </div>
 
 </div>
@@ -15033,12 +15066,10 @@ Name: 0, dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[189]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># The type of the variable</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">SepalLengthCm</span><span class="p">))</span> <span class="c1"># The type of one column of the data frame</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]))</span> <span class="c1"># The type of one row of the data frame</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15054,15 +15085,13 @@ Name: 0, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-&lt;class &#39;pandas.core.series.Series&#39;&gt;
-&lt;class &#39;pandas.core.series.Series&#39;&gt;
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>7.9</pre>
 </div>
 
 </div>
@@ -15070,18 +15099,52 @@ Name: 0, dtype: object</pre>
 </div>
 
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="view-unique-values">view unique values<a class="anchor-link" href="#view-unique-values">&#182;</a></h3>
-</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[197]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># show unique values only</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># showing unique values</span>
+<span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 </pre></div>
 
      </div>
@@ -15110,18 +15173,13 @@ Name: 0, dtype: object</pre>
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="group-data-or-column-based-on-value">group data or column based on value<a class="anchor-link" href="#group-data-or-column-based-on-value">&#182;</a></h3>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[200]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">,</span><span class="s1">&#39;Species&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15137,71 +15195,41 @@ Name: 0, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species          SepalLengthCm
-Iris-setosa      4.3              1
-                 4.4              3
-                 4.5              1
-                 4.6              4
-                 4.7              2
-                 4.8              5
-                 4.9              4
-                 5.0              8
-                 5.1              8
-                 5.2              3
-                 5.3              1
-                 5.4              5
-                 5.5              2
-                 5.7              2
-                 5.8              1
-Iris-versicolor  4.9              1
-                 5.0              2
-                 5.1              1
-                 5.2              1
-                 5.4              1
-                 5.5              5
-                 5.6              5
-                 5.7              5
-                 5.8              3
-                 5.9              2
-                 6.0              4
-                 6.1              4
-                 6.2              2
-                 6.3              3
-                 6.4              2
-                 6.5              1
-                 6.6              2
-                 6.7              3
-                 6.8              1
-                 6.9              1
-                 7.0              1
-Iris-virginica   4.9              1
-                 5.6              1
-                 5.7              1
-                 5.8              3
-                 5.9              1
-                 6.0              2
-                 6.1              2
-                 6.2              2
-                 6.3              6
-                 6.4              5
-                 6.5              4
-                 6.7              5
-                 6.8              2
-                 6.9              3
-                 7.1              1
-                 7.2              3
-                 7.3              1
-                 7.4              1
-                 7.6              1
-                 7.7              4
-                 7.9              1
-dtype: int64
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>PetalWidthCm  Species        
+0.1           Iris-setosa         6
+0.2           Iris-setosa        28
+0.3           Iris-setosa         7
+0.4           Iris-setosa         7
+0.5           Iris-setosa         1
+0.6           Iris-setosa         1
+1.0           Iris-versicolor     7
+1.1           Iris-versicolor     3
+1.2           Iris-versicolor     5
+1.3           Iris-versicolor    13
+1.4           Iris-versicolor     7
+              Iris-virginica      1
+1.5           Iris-versicolor    10
+              Iris-virginica      2
+1.6           Iris-versicolor     3
+              Iris-virginica      1
+1.7           Iris-versicolor     1
+              Iris-virginica      1
+1.8           Iris-versicolor     1
+              Iris-virginica     11
+1.9           Iris-virginica      5
+2.0           Iris-virginica      6
+2.1           Iris-virginica      6
+2.2           Iris-virginica      3
+2.3           Iris-virginica      8
+2.4           Iris-virginica      3
+2.5           Iris-virginica      3
+dtype: int64</pre>
 </div>
 
 </div>
@@ -15209,18 +15237,14 @@ dtype: int64
 </div>
 
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="MIssing-values">MIssing values<a class="anchor-link" href="#MIssing-values">&#182;</a></h2>
-</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[195]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="c1">## Shows count of missing {like:  &#39;NA&#39;, &#39;NULL&#39;, and &#39;NaN&#39; }</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="c1">## shows not missing values</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">PetalWidthCm</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15236,14 +15260,24 @@ dtype: int64
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0
-150
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+145    False
+146    False
+147    False
+148    False
+149    False
+Name: PetalWidthCm, Length: 150, dtype: bool</pre>
 </div>
 
 </div>
@@ -15251,11 +15285,118 @@ dtype: int64
 </div>
 
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2><center> THANKS </center> <br></h2>
-<center> Shoaib </center>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">PetalWidthCm</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
 </div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Species</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">PetalWidthCm</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>150</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </body>
 
